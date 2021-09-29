@@ -1,0 +1,161 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MASTER_MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>   
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Trang chủ</title>
+	<!-- Import Boostrap css, js, font awesome here -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">       
+    <link href="https://use.fontawesome.com/releases/v5.0.4/css/all.css" rel="stylesheet">    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <link href="../STYLES/plugins.css" rel="stylesheet" />
+    <link href="../STYLES/styleforpage.css" rel="stylesheet" />
+   
+</head>
+<body>
+    <!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+	<div class="container-fluid">
+		<a class="navbar-branch" href="#">
+			<img src="../IMAGES/bieutuong.png" height="50" />
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" 
+			data-target="#navbarResponsive">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link active" href="#">Trang chủ</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">✈️Vé máy bay</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">🏨Khách sạn</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">🍽️Nhà hàng</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">🧳Tour</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">✔️Đăng nhập</a>
+				</li>
+			</ul>
+			<form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Tìm Kiếm" aria-label="Tìm Kiếm">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Tìm Kiếm</button>
+    </form>
+	</div>
+</div>
+</nav>
+ xin chào<asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
+         </asp:ContentPlaceHolder>
+<!--footer area start-->
+    <footer class="footer_widgets">
+        <div class="footer_top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-md-6 col-sm-6 col-6">
+                        <div class="widgets_container">
+                            <h3>Thông tin</h3>
+                            <div class="footer_menu">
+                                <ul>
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="#">Vé Máy bay</a></li>
+                                    <li><a href="privacy-policy.html">Khách sạn</a></li>
+                                    <li><a href="#">Nhà hàng</a></li>
+                                    <li><a href="contact.html">Tour</a></li>
+                                    <li><a href="#">Đăng nhập</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-6 col-6">
+                        <div class="widgets_container">
+                            <h3>Thông tin nhóm</h3>
+                            <div class="footer_menu">
+                                <ul>
+                                    <li><a href="#">Lê đức Mạnh</a></li>
+                                    <li><a href="#">Nguyễn Đình thuyết</a></li>
+                                    <li><a href="#">Phạm văn quyết</a></li>
+                                    <li><a href="#">Đoàn Anh Tú</a></li>
+                                    <li><a href="contact.html">Site Map</a></li>
+                                    <li><a href="my-account.html">My Account</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="widgets_container contact_us">
+                            <h3>kết nối với chúng tôi</h3>
+                            <div class="footer_contact">
+                                <p>địa chỉ: ở một nơi nào đó trong vũ trụ này,cụ thể là trái đất</p>
+                                <p>Số điện thoại: <a href="tel:+(84)012345678910">(+84)012- 345 - 678- 910</a> </p>
+                                <p>Email: abc@gmail.com</p>
+                                <ul>
+                                    <li><a href="#" title="facebook"><i class="fab fa-facebook"></i></a></li>
+                                    <li><a href="#" title="google"><i class="fab fa-google-plus-g"></i></a></li>
+                                    <li><a href="#" title="twitter"><i class="fab fa-twitter"></i></a></li>
+                                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                                </ul>
+                              
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="widgets_container newsletter">
+                            <h3>Gia nhập ngay</h3>
+                            <div class="newleter-content">
+                                <p>để không bỏ lỡ các cơ hội khuyến mãi du lịch trong tương lai</p>
+                                 <div class="subscribe_form">
+                                    <form id="mc-form" class="mc-form footer-newsletter" >
+                                        <input id="mc-email" type="email" autocomplete="off" placeholder="Nhập địa chỉ email của bạn ở đây....." />
+                                        <button id="mc-submit">Đăng Kí ngay!</button>
+                                    </form>
+                                    <!-- mailchimp-alerts Start -->
+                                    <div class="mailchimp-alerts text-centre">
+                                        <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
+                                        <div class="mailchimp-success"></div><!-- mailchimp-success end -->
+                                        <div class="mailchimp-error"></div><!-- mailchimp-error end -->
+                                    </div><!-- mailchimp-alerts end -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <div class="container">
+               <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                        <div class="copyright_area">
+                            <p> &copy; 2021 <strong> </strong> được làm bằng ❤️ by <a href="https://hasthemes.com/" target="_blank"><strong>Mạnh phở</strong></a></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="footer_custom_links">
+                            <ul>
+                                <li><a href="#">chưa có gì ở đây</a></li>
+                                <li><a href="wishlist.html">chưa có gì ở đây</a></li>
+                                <li><a href="#">chưa có gì ở đây</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
