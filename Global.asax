@@ -1,12 +1,12 @@
 ﻿<%@ Application Language="C#" %>
-<%@ Import Namespace="QuanLyDuLich" %>
+
 
 <script runat="server">
 
     void Application_Start(object sender, EventArgs e)
     {
         // Code that runs on application startup
-        AuthConfig.RegisterOpenAuth();
+        
     }
     
     void Application_End(object sender, EventArgs e)
