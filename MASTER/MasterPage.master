@@ -72,9 +72,9 @@
                             <div class="footer_menu">
                                 <ul>
                                     <li><a href="about.html">About Us</a></li>
-                                    <li><a href="#">Vé Máy bay</a></li>
-                                    <li><a href="privacy-policy.html">Khách sạn</a></li>
-                                    <li><a href="#">Nhà hàng</a></li>
+                                    <li><a href="#">Vé Máy Bay</a></li>
+                                    <li><a href="privacy-policy.html">Khách Sạn</a></li>
+                                    <li><a href="#">Nhà Hàng</a></li>
                                     <li><a href="contact.html">Tour</a></li>
                                     <li><a href="#">Đăng nhập</a></li>
                                 </ul>
@@ -86,9 +86,9 @@
                             <h3>Thông tin nhóm</h3>
                             <div class="footer_menu">
                                 <ul>
-                                    <li><a href="#">Lê đức Mạnh</a></li>
+                                    <li><a href="#">Lê Đức Mạnh</a></li>
                                     <li><a href="#">Nguyễn Đình thuyết</a></li>
-                                    <li><a href="#">Phạm văn quyết</a></li>
+                                    <li><a href="#">Phạm Văn Quyết</a></li>
                                     <li><a href="#">Đoàn Anh Tú</a></li>
                                     <li><a href="contact.html">Site Map</a></li>
                                     <li><a href="my-account.html">My Account</a></li>
@@ -100,9 +100,9 @@
                         <div class="widgets_container contact_us">
                             <h3>kết nối với chúng tôi</h3>
                             <div class="footer_contact">
-                                <p>địa chỉ: ở một nơi nào đó trong vũ trụ này,cụ thể là trái đất</p>
-                                <p>Số điện thoại: <a href="tel:+(84)012345678910">(+84)012- 345 - 678- 910</a> </p>
-                                <p>Email: abc@gmail.com</p>
+                                <p>Địa chỉ : Ở một nơi nào đó trong vũ trụ này , cụ thể là trái đất</p>
+                                <p>Số điện thoại : <a href="tel:+(84)012345678910">(+84)012- 345 - 678- 910</a> </p>
+                                <p>Email : abc@gmail.com</p>
                                 <ul>
                                     <li><a href="#" title="facebook"><i class="fab fa-facebook"></i></a></li>
                                     <li><a href="#" title="google"><i class="fab fa-google-plus-g"></i></a></li>
@@ -117,7 +117,7 @@
                         <div class="widgets_container newsletter">
                             <h3>Gia nhập ngay</h3>
                             <div class="newleter-content">
-                                <p>để không bỏ lỡ các cơ hội khuyến mãi du lịch trong tương lai</p>
+                                <p>Để không bỏ lỡ các cơ hội khuyến mãi du lịch trong tương lai</p>
                                  <div class="subscribe_form">
                                     <form id="mc-form" class="mc-form footer-newsletter" >
                                         <input id="mc-email" type="email" autocomplete="off" placeholder="Nhập địa chỉ email của bạn ở đây....." />
