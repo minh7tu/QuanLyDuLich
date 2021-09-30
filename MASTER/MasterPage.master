@@ -115,7 +115,7 @@
                                 <p>Để không bỏ lỡ các cơ hội khuyến mãi du lịch trong tương lai</p>
                                  <div class="subscribe_form">
                                     <form id="mc-form" class="mc-form footer-newsletter" >
-                                        <input id="mc-email" type="email" autocomplete="off" placeholder="Nhập địa chỉ email của bạn ở đây....." />
+                                        <input id="mc-email" type="email" autocomplete="off" placeholder="Nhập số điện thoại của bạn ở đây....." />
                                         <button id="mc-submit">Đăng Kí ngay!</button>
                                     </form>
                                     <!-- mailchimp-alerts Start -->
