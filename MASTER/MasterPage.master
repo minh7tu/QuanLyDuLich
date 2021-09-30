@@ -25,7 +25,7 @@
     <!-- Navigation -->
 <nav class="navbar navbar-expand-md navbar-light bg-light sticky-top" style="width:100%;">
 	<div class="container-fluid">
-		<a class="navbar-branch" href="index.html">
+		<a class="navbar-branch" href="../index.html">
             <img src="../IMAGES/logonew.png" title="BÉT PỜ RAI PỜ LÚT" style="max-width:180px;" />
 		</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" 
@@ -35,7 +35,7 @@
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
-					<a class="nav-link active" href="index.html" title="Trang chủ">Trang chủ</a>
+					<a class="nav-link active" href="../index.html" title="Trang chủ">Trang chủ</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="VeMayBay.aspx" title="Vé máy bay">✈️Vé máy bay</a>
