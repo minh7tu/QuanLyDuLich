@@ -71,12 +71,9 @@
                             <h3>Thông tin</h3>
                             <div class="footer_menu">
                                 <ul>
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="#">Vé Máy Bay</a></li>
-                                    <li><a href="privacy-policy.html">Khách Sạn</a></li>
-                                    <li><a href="#">Nhà Hàng</a></li>
-                                    <li><a href="contact.html">Tour</a></li>
-                                    <li><a href="#">Đăng nhập</a></li>
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Site Map</a></li>
+                                    <li><a href="#">My Account</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -87,11 +84,9 @@
                             <div class="footer_menu">
                                 <ul>
                                     <li><a href="#">Lê Đức Mạnh</a></li>
-                                    <li><a href="#">Nguyễn Đình thuyết</a></li>
                                     <li><a href="#">Phạm Văn Quyết</a></li>
+                                    <li><a href="#">Nguyễn Đình Thuyết</a></li>
                                     <li><a href="#">Đoàn Anh Tú</a></li>
-                                    <li><a href="contact.html">Site Map</a></li>
-                                    <li><a href="my-account.html">My Account</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -148,7 +143,7 @@
                         <div class="footer_custom_links">
                             <ul>
                                 <li><a href="#">chưa có gì ở đây</a></li>
-                                <li><a href="wishlist.html">chưa có gì ở đây</a></li>
+                                <li><a href="#">chưa có gì ở đây</a></li>
                                 <li><a href="#">chưa có gì ở đây</a></li>
                             </ul>
                         </div>
