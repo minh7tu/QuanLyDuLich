@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="temp.aspx.cs" Inherits="FEATURE_LOGIN_temp" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="LOGIN_Login" %>
 
 <!DOCTYPE html>
 
