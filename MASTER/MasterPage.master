@@ -35,7 +35,7 @@
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item">
-					<a class="nav-link active" href="../index.htm" title="Trang chủ">Trang chủ</a>
+					<a class="nav-link active" href="../FEATURE/index.htm" title="Trang chủ">Trang chủ</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="VeMayBay.aspx" title="Vé máy bay">✈️Vé máy bay</a>
