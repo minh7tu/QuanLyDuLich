@@ -23,10 +23,10 @@
 </head>
 <body>
     <!-- Navigation -->
-<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top" style="width:100%;">
 	<div class="container-fluid">
 		<a class="navbar-branch" href="index.htm">
-            <img src="../IMAGES/logonew.png" title="BÉT PỜ RAI PỜ LÚT" style="max-width:200px; width: 259px;" />
+            <img src="../IMAGES/logonew.png" title="BÉT PỜ RAI PỜ LÚT" style="max-width:180px;" />
 		</a>
 		<button class="navbar-toggler" type="button" data-toggle="collapse" 
 			data-target="#navbarResponsive">
