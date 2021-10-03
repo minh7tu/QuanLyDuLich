@@ -12887,7 +12887,7 @@ html, body {
 }
 .navbar{background-color: #FFFFFF !important;}
 .navbar li a{ border: 1px solid black;
-border-radius: 5px;
+border-radius: 10px;
 margin: 5px; }
 .bnt button:hover{
   color: #FF8C00 !important;
@@ -12896,6 +12896,32 @@ margin: 5px; }
   background-color: #FF8C00;
   color: #FFFFFF;
   border: 1px solid white;}
+.canle {
+    text-align:center;
+    color:#FF8C00 !important;
+}
+.a_hover:hover {
+    color:#FF8C00 !important;
+}
+.canlechu {
+    margin-left:80px;
+}
+
+
+.imagesize {
+    max-width:650px;
+    border-radius:10px;
+    border: 4px solid white;
+
+}
+.imagesize:hover {
+    border:1px solid black;
+}
+.horizontal-line {
+    border-bottom: 3px solid #e5e5e5;
+    margin-bottom: 8px;
+    padding-top:20px;
+}
 /*Áp dụng cho những browser có chiều rộng <= 900px*/
 /*Áp dụng cho những browser có chiều rộng <= 900px*/
 @media (max-width: 1024px) { body,html {font-size: 19px; top: 10%;} }
