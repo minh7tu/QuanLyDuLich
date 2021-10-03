@@ -11,18 +11,18 @@ public class ConfigData
 	{
 		
 	}
-    //Hàm truyền vào biến kết nối để mở kết nối
-    public void OpenConn(SqlConnection connec)
+    //Hàm để mở kết nối
+    public void Open()
     {
         string conn = WebConfigurationManager.ConnectionStrings["QuanLyDuLich"].ConnectionString; 
-        connec = new SqlConnection(conn);
+        SqlConnection connec = new SqlConnection(conn);
         connec.Open();
     }
-    //Hàm truyền vào biến kết nối để đóng kết nối
-    public void CloseConn(SqlConnection connec)
+    //Hàm để đóng kết nối
+    public void Close()
     {
         string conn = WebConfigurationManager.ConnectionStrings["QuanLyDuLich"].ConnectionString;
-        connec = new SqlConnection(conn);
+        SqlConnection connec = new SqlConnection(conn);
         connec.Close();
     }
 }
