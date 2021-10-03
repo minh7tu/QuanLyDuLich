@@ -14,6 +14,16 @@ public partial class FEATURE_Tour : System.Web.UI.Page
 
     protected void btnFind_Click(object sender, EventArgs e)
     {
+        try
+        {
+            ConfigData ct = new ConfigData();
+            ct.Open();
+            Response.Write("Thanh cong");
+        }
+        catch
+        {
+            Response.Write("That bai");
+        }
 
     }
 }
