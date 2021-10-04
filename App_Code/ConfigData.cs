@@ -12,17 +12,17 @@ public class ConfigData
 		
 	}
     //Hàm để mở kết nối
-    public void Open()
+    public void Open(SqlConnection connec)
     {
         string conn = WebConfigurationManager.ConnectionStrings["QuanLyDuLich"].ConnectionString; 
-        SqlConnection connec = new SqlConnection(conn);
+        connec = new SqlConnection(conn);
         connec.Open();
     }
     //Hàm để đóng kết nối
-    public void Close()
+    public void Close(SqlConnection connec)
     {
         string conn = WebConfigurationManager.ConnectionStrings["QuanLyDuLich"].ConnectionString;
-        SqlConnection connec = new SqlConnection(conn);
+        connec = new SqlConnection(conn);
         connec.Close();
     }
 }
