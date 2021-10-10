@@ -151,7 +151,7 @@ button, input[type="submit"] {
 
 img {
   max-width: 100%;
-  height: auto;
+    margin-bottom: 0px;
 }
 
 ul {
@@ -12909,7 +12909,7 @@ margin: 5px; }
 
 
 .imagesize {
-    max-width:650px;
+    max-width:450px;
     border-radius:10px;
     border: 4px solid white;
 
@@ -12922,6 +12922,21 @@ margin: 5px; }
     margin-bottom: 8px;
     padding-top:20px;
 }
+.buttoncanle {
+       float:right;
+       border-radius:10px;
+       margin-top:-45px;
+}
+.data_view {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border:1px solid black;
+    border-radius:5px;
+    
+    
+}
+.data_view:hover {
+    border-color:#FF8C00 ;
+    }
 /*Áp dụng cho những browser có chiều rộng <= 900px*/
 /*Áp dụng cho những browser có chiều rộng <= 900px*/
 @media (max-width: 1024px) { body,html {font-size: 19px; top: 10%;} }
