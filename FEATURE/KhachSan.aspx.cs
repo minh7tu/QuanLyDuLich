@@ -11,9 +11,38 @@ public partial class FEATURE_KhachSan : System.Web.UI.Page
     
     protected void Page_Load(object sender, EventArgs e)
     {
-
+       
     }
-    protected void Button1_Click(object sender, EventArgs e)
+
+    protected void btn_timkiem_Click(object sender, EventArgs e)
     {
+       
+       
+         if(DropDownList1.SelectedValue.Equals("Điểm Đến") && cb_all.Checked == false)
+        {
+            Response.Write("<script>alert('hãy chọn nơi bạn muốn tìm');</script>");
+        }
+        else if (cb_all.Checked)
+        {
+            Response.Redirect("timkiemkhachsan2.aspx");
+        }
+        else
+        {
+            Response.Redirect("timkiemkhachsan2.aspx?DiemDen=" + DropDownList1.SelectedValue);
+        }
+
+        
+    }
+   
+    protected void cb_all_CheckedChanged(object sender, EventArgs e)
+    {
+        if (cb_all.Checked)
+        {
+            DropDownList1.Enabled = false;
+        }
+        else
+        {
+            DropDownList1.Enabled = true;
+        }
     }
 }

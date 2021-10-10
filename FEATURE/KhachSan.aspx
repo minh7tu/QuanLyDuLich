@@ -2,12 +2,13 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TieuDe" Runat="Server">
     <title> Khách sạn</title>
+   
     <style>
         
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="NoiDung" Runat="Server">
-    <form runat="server">
+   <div class="container-fluid" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
     <!-- Carousel -->
 <div id="slides" class="carousel slide" data-ride="carousel">
 	<ul class="carousel-indicators">
@@ -32,9 +33,37 @@
 		</div>
 	</div>
 </div>
-        <div class="container-fluid" style="margin-left:600px;">
-    <asp:Button ID="Button1" runat="server" Text="Bấm Vào tôi" CssClass="btn-danger" OnClick="Button1_Click"/>
-</div>
+        
+    <form id="Form1" runat="server">
+        <div class="container" style="width:458px; border:1px solid black; margin-top:10px; border-radius:10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); padding-bottom:10px; height: 149px;">
+            <h4 >Tìm kiếm khách sạn giá rẻ</h4>
+            <hr style="margin-top:-5px;" />
+        <asp:DropDownList ID="DropDownList1" runat="server" Width="430px" CssClass="align-items-md-center" align="center" ToolTip="chọn điểm đến của bạn" Height="24px">
+             <asp:ListItem Selected="True" >Điểm Đến</asp:ListItem>
+                    <asp:ListItem>Nha Trang</asp:ListItem>
+                    <asp:ListItem>Quy Nhơn</asp:ListItem>
+                    <asp:ListItem>Hạ Long</asp:ListItem>
+                    <asp:ListItem>Phú Quốc</asp:ListItem>
+                    <asp:ListItem>SaPa</asp:ListItem>
+        </asp:DropDownList>
+            <asp:CheckBox ID="cb_all" runat="server" AutoPostBack="True" OnCheckedChanged="cb_all_CheckedChanged" Text="hiển thị tất cả" />
+           
+            <br />
+            &nbsp;<br />
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+
+        </asp:ScriptManager>
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
+                 <asp:Button ID="btn_timkiem" runat="server" CssClass="btn btn-warning buttoncanle" OnClick="btn_timkiem_Click" Text="Tìm Kiếm" />
+                <br />
+            </ContentTemplate>
+        </asp:UpdatePanel>
+        
+            <br />
+        </div>
+        </form>
+
     <div class="container-fluid padding">
 	<div class="row welcome text-center">
 		<div class="col-12">
@@ -137,26 +166,26 @@
            <div class="container">
   <div class="row" style="border: 10px solid white;">
       
-    <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="gallery" class="col-md-4 imagesize" >
+    <a href="https://unsplash.it/1200/768.jpg?image=251" data-toggle="lightbox" data-gallery="gallery" class="col-md-4 col-sm-4 col-xs-4 imagesize" >
         <img src="../IMAGES/nha-trang-6062d50fd4916-476x476.jpg" style="border-radius:10px;" title="Nha Trang"/> <figcaption class="canle">Nha Trang</figcaption>
     </a>
           
-    <a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="gallery" class="col-md-4 imagesize">
+    <a href="https://unsplash.it/1200/768.jpg?image=252" data-toggle="lightbox" data-gallery="gallery" class="col-md-4  col-sm-4 col-xs-4 imagesize">
         <img src="../IMAGES/phu-quoc-6062d4c77e096-476x476.jpg"style="border-radius:10px;"  title="Phú Quốc"/><figcaption class="canle"> Phú Quốc</figcaption>
     </a>
     
-    <a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox" data-gallery="gallery" class="col-md-4 imagesize">
+    <a href="https://unsplash.it/1200/768.jpg?image=253" data-toggle="lightbox" data-gallery="gallery" class="col-md-4  col-sm-4 col-xs-4 imagesize">
         <img src="../IMAGES/quy-nhon-6062d568d5375-476x476.jpg"style="border-radius:10px;" title="Quy Nhơn" /><figcaption class="canle">Quy Nhơn</figcaption>
     </a>
   </div>
   <div class="row" style="border: 10px solid white;">
-    <a href="https://unsplash.it/1200/768.jpg?image=254" data-toggle="lightbox" data-gallery="gallery" class="col-md-4 imagesize">
+    <a href="https://unsplash.it/1200/768.jpg?image=254" data-toggle="lightbox" data-gallery="gallery" class="col-md-4 col-sm-4 col-xs-4 imagesize">
         <img src="../IMAGES/sapa-60a39553465e7-476x476.png"style="border-radius:10px;" title="Sa Pa" /><figcaption class="canle">Sa Pa</figcaption>
     </a>
-    <a href="https://unsplash.it/1200/768.jpg?image=255" data-toggle="lightbox" data-gallery="gallery" class="col-md-4 imagesize">
+    <a href="https://unsplash.it/1200/768.jpg?image=255" data-toggle="lightbox" data-gallery="gallery" class="col-md-4   col-sm-4 col-xs-4 imagesize">
         <img src="../IMAGES/ha-long-6062d7e697fae-476x476.jpg"style="border-radius:10px;" title="Hạ Long" /><figcaption class="canle"> Hạ Long</figcaption>
     </a>
-    <a href="https://unsplash.it/1200/768.jpg?image=256" data-toggle="lightbox" data-gallery="gallery" class="col-md-4 imagesize">
+    <a href="https://unsplash.it/1200/768.jpg?image=256" data-toggle="lightbox" data-gallery="gallery" class="col-md-4 col-sm-4 col-xs-4 imagesize">
         <img src="../IMAGES/da-nang-6062d6b1901ef-476x476.jpg"style="border-radius:10px;" title="Đà Nẵng" /><figcaption class="canle">Đà nẵng</figcaption>
     </a>
   </div>
@@ -170,8 +199,9 @@
     </p>
    
         </div>
-    <div class="row" style="margin:auto;">
-        <div class="col" style="margin:auto;">
+       <div class="container-fluid">
+    <div class="row" >
+        <div class="col" >
             <a href="#"><img src="../IMAGES/campuchia-5f719edf93b68.jpg" class="imagesize rounded mx-auto d-block" title="Cam Pu Chia"/><figcaption class="canle">CamPuChia</figcaption></a>
 
         </div>
@@ -187,6 +217,7 @@
             <a href="#"><img src="../IMAGES/thai-lan-5f36610f951cf.jpg"class="imagesize rounded mx-auto d-block"  /><figcaption class="canle">Thái Lan</figcaption></a>
                 </div>
     </div>
+           </div>
     <div class="container">
         <div class="horizontal-line">
         <h3 style="margin-top:10px;">Khách sạn theo địa điểm</h3>
@@ -253,8 +284,7 @@
     </div>
 
 <hr />
-</form>
-      
+</div>
    
 </asp:Content>
 
