@@ -51,26 +51,26 @@
                <form id="form1" runat="server">
                 <div class="form-floating mb-3">
                     <asp:TextBox ID="txt_tk" runat="server" CssClass="form-control"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txt_tk" Display="Dynamic" ErrorMessage="bạn chưa nhập tài khoản" ForeColor="Red"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txt_tk" Display="Dynamic" ErrorMessage="Bạn chưa nhập tài khoản" ForeColor="Red"></asp:RequiredFieldValidator>
                   <label for="floatingInput">Tên đăng nhập</label>
                 </div>
                 <div class="form-floating mb-3">
                     <asp:TextBox ID="txt_mk" runat="server" CssClass="form-control" TextMode="Password"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txt_mk" Display="Dynamic" ErrorMessage="bạn chưa nhập mật khẩu" ForeColor="Red"></asp:RequiredFieldValidator>
-                  <label for="floatingPassword">mật khẩu</label>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txt_mk" Display="Dynamic" ErrorMessage="Bạn chưa nhập mật khẩu" ForeColor="Red"></asp:RequiredFieldValidator>
+                  <label for="floatingPassword">Mật khẩu</label>
                 </div>
 
                 <div class="form-check mb-3">
                     <asp:CheckBox ID="CheckBox1" runat="server"   />
                   <label class="form-check-label" for="rememberPasswordCheck">
-                   nhớ tôi!
+                   Nhớ tôi!
                   </label>
                 </div>
 
                 <div class="d-grid">
                     <asp:Button ID="Button1" runat="server" Text="Đăng nhập" CssClass="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2"/>
                   <div class="text-center">
-                    <a class="small" href="#">quên mật khẩu</a>
+                    <a class="small" href="#">Quên mật khẩu</a>
                   </div>
                 </div>
 
