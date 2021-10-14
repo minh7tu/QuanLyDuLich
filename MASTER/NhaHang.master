@@ -1,0 +1,159 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="NhaHang.master.cs" Inherits="MASTER_NhaHang" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Nhà hàng</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link href="../STYLES/NhaHang.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style2
+        {
+            width: 14%;
+        }
+        .auto-style3
+        {
+            text-align: center;
+            height: 59px;
+        }
+        .auto-style4
+        {
+            color: #FF66CC;
+            text-align: center;
+            width: 286px;
+        }
+        .auto-style8
+        {
+            font-size: x-large;
+        }
+        .auto-style9
+        {
+            text-align: left;
+            padding-left:45px;
+        }
+        #NoiDungPhu
+        {
+            width:30%;
+            margin:0;
+            padding:0;
+        }
+        .auto-style10
+        {
+            flex-basis: 30%;
+            position: static;
+            top: 70px;
+            align-self: flex-start;
+            width: 15%;
+            background: #cbdffa;
+            padding:0;
+            margin:0 auto;
+        }
+        .auto-style10 ul li
+        {
+            margin:0 auto;
+        }
+        .right,#NoiDungPhu
+        {
+            width:30%;
+            margin:0 auto;
+            padding:0;
+        }
+        .auto-style11
+        {
+            width: 70%;
+            margin: 0 auto;
+            padding: 0px;
+        }
+    </style>
+    </head>
+<body>
+    <form id="form1" runat="server">
+    <div class="header">
+        <img src="../IMAGES/logo.png" class="logo"/><h1 class="auto-style8">Chào Mừng Quý Khách Đã Đến Với Dịch Vụ Nhà Hàng Của chúng Tôi</h1>
+    </div>
+    <div class="contain">
+        <div class="menu">
+            <ul>
+                <li><a href="QuanLiNH.aspx">Quản Lí Nhà Hàng</a></li>
+                <li><a href="TimKiemNH.aspx">Tìm Kiếm Nhà Hàng</a></li>
+                <li><a href="DatNhaHang.aspx">Đặt Nhà Hàng</a></li>
+                <li><a href="ThanhToan.aspx">Thanh Toán</a></li>
+                <li>
+                    <div class="form-group form-inline">
+                    <input  placeholder="Nhập từ Khóa" type="text" name="search" class="form-control form-inline" />
+                    <input type="submit" name="submit" value="Tìm Kiếm" class="form-control" />
+                    </div>
+                </li>
+            </ul>
+        </div>
+         <table align="center" class="nav-justified">
+                    <tr>
+                        <td class="auto-style10">
+                           <ul>
+                            <li><a href="https://smartapp.edu.vn/template_site/website-gioi-thieu-nha-hang">Giới Thiệu</a></li>
+                            <li><a href="#">Danh Mục</a></li>
+                            <li><a href="TinTuc.aspx">Tin Tức</a></li>
+                            <li><a href="#">Đánh Giá</a></li>
+                           </ul>
+                        </td>
+                        <td class="auto-style11">
+                           <asp:ContentPlaceHolder ID="NoiDung" Runat="Server">
+                           </asp:ContentPlaceHolder>
+                        </td>
+                        <td class="right">
+                           <asp:ContentPlaceHolder ID="NoiDungPhu" Runat="Server">
+                           </asp:ContentPlaceHolder>
+                        </td>
+                    </tr>
+          </table> 
+          <table align="center" class="footer">
+              <td class="leftfooter">
+                   <h2 class="auto-style4">Phản hồi từ khách hàng<br />
+                     <table align="ndleft">
+                        <tr>
+                            <td class="auto-style2">
+                                <asp:TextBox ID="txtDG" runat="server" Width="236px"></asp:TextBox>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <asp:Button ID="btnGui" runat="server" Text="Gửi" Height="30px" Width="66px" />
+                            </td>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </tr>
+                    </table>
+              </td>
+              <td class="mainfooter">
+                   <div class="auto-style9">
+                     <img src="../IMAGES/istockphoto-1156050322-1024x1024.jpg" align="center" class="bia"/><div class="auto-style9">
+                            Liên Kết:<a href="https://www.pasgo.vn/ha-noi/nha-hang">nhà hàng PasGo</a>
+                       </div>
+                       <div class="auto-style3">
+                            CopyRight:Phạm Văn Quyết,MSV:642961,Khoa CNTT,HVNNVN
+                       </div>
+                  </div>      
+              </td>
+              <td class="rightfooter">
+                 <div class="noi-dung about">
+                     <h2>Về Chúng Tôi</h2> 
+                     <ul class="social-icon">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                    </ul>
+                  </div>  
+             </td>
+          </table>
+      </div>
+    </form>
+</body>
+</html>
