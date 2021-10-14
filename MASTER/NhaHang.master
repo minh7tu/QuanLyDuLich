@@ -1,0 +1,74 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="NhaHang.master.cs" Inherits="MASTER_NhaHang" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Nhà Hàng</title>
+    <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="../STYLES/styleNhaHang.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<form id="form" runat="server">
+ <nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Page 1</a></li>
+      <li><a href="#">Page 2</a></li>
+    </ul>
+    <form class="navbar-form navbar-left" action="/action_page.php">
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search" name="search"/>
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</nav>
+        <div class="row">
+            <div class="col-md-3">
+                <div>Thông Tin Nhà Hàng</div>
+            </div>
+            <div class="col-md-9">
+                <asp:ContentPlaceHolder ID="NoiDung" runat="server"></asp:ContentPlaceHolder>
+            </div>   
+        </div>
+        <div class="container">
+            <h2>Wesite Nhà Hàng</h2>
+            <p>Những ý Kiến khách hàng hay liên hệ theo đường (links) sau:</p>                  
+            <ul class="pager">
+                <li><a href="#">Previous</a></li>
+                <li><a href="#">Next</a></li>
+            </ul>
+        </div>
+        <div class="footer">
+            <div class="ndfooter" align="center">
+                CopyRight:Phạm Văn Quyết,MSV:642961,Khoa CNTT,HVNN<br/>
+                Liên Hệ:0929246316
+            </div>
+        </div>
+        </div>
+    </form>
+</body>
+</html>
