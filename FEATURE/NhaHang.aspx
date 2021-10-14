@@ -245,11 +245,6 @@
         </tr>
     </table>
     
-    
-    
-
-</asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="NoiDungPhu" Runat="Server">
     <table class="ndphu">
         <tr>
             <td>

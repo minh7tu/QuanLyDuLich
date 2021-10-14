@@ -107,8 +107,7 @@
         </td>
     </tr>
 </table>
-</asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="NoiDungPhu" Runat="Server">
+
     <img src="../IMAGES/images%20(1).jpg" style="width: 219px" />
 </asp:Content>
 

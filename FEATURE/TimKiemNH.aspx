@@ -92,8 +92,7 @@
             </td>
         </tr>
     </table>
-</asp:Content>
-<asp:Content ID="Content3" ContentPlaceHolderID="NoiDungPhu" Runat="Server">
+
     <p>
         <img alt="" class="auto-style20" src="../IMAGES/chup-anh-mon-an-7.jpg" /></p>
 </asp:Content>
