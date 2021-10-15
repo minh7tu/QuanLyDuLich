@@ -40,7 +40,7 @@ public partial class FEATURE_QuanLiNH : System.Web.UI.Page
         cmd.Parameters.AddWithValue("@MonAn", monan);
         try {
             cmd.ExecuteNonQuery();
-            Response.Write("Tìm thấy yêu cầu");
+            Response.Write("KetQuaTK.aspx");
         }
         catch (Exception)
         {
