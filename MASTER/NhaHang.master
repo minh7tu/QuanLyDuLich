@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link href="../STYLES/NhaHang.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="shortcut icon" type="image/x-icon" href="../IMAGES/4141.ico" />
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
     <style type="text/css">
@@ -97,7 +98,7 @@
                             <li><a href="https://smartapp.edu.vn/template_site/website-gioi-thieu-nha-hang">Giới Thiệu</a></li>
                             <li><a href="#">Danh Mục</a></li>
                             <li><a href="TinTuc.aspx">Tin Tức</a></li>
-                            <li><a href="#">Đánh Giá</a></li>
+                            <li><a href="DanhGia.aspx">Đánh Giá</a></li>
                            </ul>
                         </td>
                         <td class="auto-style11">
