@@ -19,29 +19,18 @@ public partial class FEATURE_KetQuaTK : System.Web.UI.Page
             string strSQL = "Select MaNH,TenNH,DiaDiem,ChiPhi,XepHang,DanhGia,MonAn from NHAHANG";
             SqlCommand cmd = new SqlCommand(strSQL, myconn);
             SqlDataReader data = cmd.ExecuteReader();
-            Response.Write("<table class='bang' align='center'>");
-            Response.Write("<tr>");
-            Response.Write("<th>Mã Nhà Hàng</th>");
-            Response.Write("<th>Tên Nhà Hàng</th>");
-            Response.Write("<th>Địa Điểm</th>");
-            Response.Write("<th>Chi Phí</th>");
-            Response.Write("<th>Xếp Hạng</th>");
-            Response.Write("<th>Đánh Giá</th>");
-            Response.Write("<th>Món Ăn</th>");
-            Response.Write("</tr>");
             while (data.Read())
             {
-                Response.Write("<tr>");
-                Response.Write("<td>" + data[0].ToString() + "</td>");
-                Response.Write("<td>" + data[1].ToString() + "</td>");
-                Response.Write("<td>" + data[4].ToString() + "</td>");
-                Response.Write("<td>" + data[6].ToString() + "</td>");
-                Response.Write("<td>" + data[8].ToString() + "</td>");
-                Response.Write("<td>" + data[9].ToString() + "</td>");
-                Response.Write("<td>" + data[10].ToString() + "</td>");
-                Response.Write("</tr>");
+                int cells = 5;
+                TableRow r = new TableRow();
+                for (int j = 0; j < cells; j++)
+                {
+                    TableCell c = new TableCell();
+                    c.Text = data[j].ToString();
+                    r.Cells.Add(c);
+                }
+                Table1.Rows.Add(r);
             }
-            Response.Write("</table>");
             myconn.Close();
         }
         catch (Exception)

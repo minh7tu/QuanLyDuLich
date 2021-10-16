@@ -34,8 +34,6 @@
 </script>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
-     
-    
     <style type="text/css">
         .ndr
         {
@@ -250,37 +248,30 @@
 
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="NoiDungPhu" Runat="Server">
-    <table class="ndphu">
-        <tr>
-            <td>
-                <img src="../IMAGES/24416c7b5af40.png_list.jpg" class="anhphu1"/>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <img src="../IMAGES/24416c7b5af40.png_list.jpg" class="anhphu1"/>
-            </td>
-        </tr>
-         <tr>
-            <td>
-                <img src="../IMAGES/24416c7b5af40.png_list.jpg" class="anhphu1"/>
-            </td>
-        </tr>
-         <tr>
-            <td>
-                <img src="../IMAGES/24416c7b5af40.png_list.jpg" class="anhphu1"/>
-            </td>
-        </tr>
-         <tr>
-            <td>
-                <img src="../IMAGES/24416c7b5af40.png_list.jpg" class="anhphu1"/>
-            </td>
-        </tr>
-         <tr>
-            <td>
-                <img src="../IMAGES/24416c7b5af40.png_list.jpg" class="anhphu1"/>
-            </td>
-        </tr>
-    </table>
+    <div class="container-fluid" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+    <!-- Carousel -->
+<div id="slides" class="carousel slide" data-ride="carousel">
+	<ul class="carousel-indicators">
+		<li data-target="#slides" data-slide-to="0" class="active"></li>
+		<li data-target="#slides" data-slide-to="1"></li>
+		<li data-target="#slides" data-slide-to="2"></li>		
+		<li data-target="#slides" data-slide-to="3"></li>
+	</ul>
+	<div class="carousel-inner">
+		<div class="carousel-item active">
+            <img src="../IMAGES/Square–Novotel-Premier-Han-River-nha-hang-da-nang.jpg" style="width: 247px; height: 368px;"/>	
+		</div>
+		<div class="carousel-item">
+            <img src="../IMAGES/The-Rachel-Restaurant-Bar-nha-hang-da-nang.jpg" style="width: 247px; height: 368px;"/>
+		</div>
+		<div class="carousel-item">
+            <img src="../IMAGES/Restaurant-2-1.jpg" style="width: 247px; height: 368px;"/>
+		</div>
+		<div class="carousel-item">
+            <img src="../IMAGES/images%20(6).jpg" style="width: 247px; height: 300px;"/>
+		</div>
+	</div>
+</div>
+</div>
 </asp:Content>
 
