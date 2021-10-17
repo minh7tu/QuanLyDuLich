@@ -26,10 +26,21 @@
         <asp:Label ID="lb_dem" runat="server" Text=""></asp:Label>
         </h4>
         <br />
-        <asp:DataList ID="DataList1" runat="server" BackColor="White" BorderColor="#FF66FF" BorderStyle="None" BorderWidth="2px" CellPadding="3"   Font-Strikeout="False" Font-Underline="False" ForeColor="White"   CellSpacing="15" ShowFooter="False" ShowHeader="False" Font-Bold="False" Font-Italic="False" Font-Overline="False"  GridLines="Vertical" ToolTip="ấn vào để xem chi tiết" ViewStateMode="Disabled"  CssClass="data_view"  align="center">
+        <h5 style="text-align:center;">xắp xếp giá theo:<asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged">
+            <asp:ListItem>không xắp sếp</asp:ListItem>
+            <asp:ListItem>tăng dần</asp:ListItem>
+            <asp:ListItem>giảm dần</asp:ListItem>
+            </asp:DropDownList>
+            xắp xếp theo sao:<asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="True" OnSelectedIndexChanged="DropDownList2_SelectedIndexChanged">
+                <asp:ListItem>không xắp xếp</asp:ListItem>
+                <asp:ListItem>tăng dần</asp:ListItem>
+                <asp:ListItem>giảm dần</asp:ListItem>
+            </asp:DropDownList>
+        </h5>
+        <asp:DataList ID="DataList1" runat="server" BackColor="White" BorderColor="#FF66FF" BorderStyle="None" BorderWidth="2px" CellPadding="3"   Font-Strikeout="False" Font-Underline="False" ForeColor="White"   CellSpacing="29" ShowFooter="False" ShowHeader="False" Font-Bold="False" Font-Italic="False" Font-Overline="False"  GridLines="Vertical" ToolTip="ấn vào để xem chi tiết" ViewStateMode="Disabled"  CssClass="data_view"  align="center">
             <ItemStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" />
             <ItemTemplate>
-                <table class="auto-style1 data_view">
+                <table class="auto-style1 data_view" style="text-align:center;">
                     <tr>
                         <td class="auto-style5" rowspan="8">
                             <asp:Image ID="Image1" runat="server" Height="216px" ImageUrl='<%# Eval("Anh") %>' Width="284px" />
@@ -76,6 +87,18 @@
         <div class="text-xxl-center" style="text-align:center;">
         <br />
           <h4><a href="KhachSan.aspx" class="a_hover" style="text-align:center;">Quay trở lại trang khách sạn</a></h4>
+            <p>
+                <asp:Button ID="btn_dau" runat="server" Text="Trang đầu" OnClick="btn_dau_Click" CssClass="btn btn-warning"/>
+                <asp:Button ID="btn_truoc" runat="server" Text="trước" OnClick="btn_truoc_Click" CssClass="btn btn-warning"/>
+
+                <asp:TextBox ID="txt_trang" runat="server" Height="28px" Width="93px" Enabled="False" CssClass="text-center" ToolTip="số trang/số bảng ghi" BackColor="White" BorderStyle="Solid" Font-Bold="True" ReadOnly="True"></asp:TextBox>
+                <asp:Button ID="btn_sau" runat="server" Text="sau" OnClick="btn_sau_Click" CssClass="btn btn-warning"/>
+
+
+                <asp:Button ID="btn_cuoi" runat="server" Text="Trang cuối" OnClick="btn_cuoi_Click" CssClass="btn btn-warning"/>
+
+
+            </p>
         
         </div>
         <hr />
