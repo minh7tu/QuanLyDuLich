@@ -24,34 +24,14 @@ public partial class FEATURE_timkiemkhachsan2 : System.Web.UI.Page
         Response.Redirect("datkhachsan.aspx");
         
     }
-
+    
     //sự kiện khi người dùng ấn vào nút để lùi 1 trang
     protected void btn_dau_Click(object sender, EventArgs e)
     {
         trangthu = 0;
-        if (DropDownList2.SelectedValue != null && DropDownList2.SelectedValue == "tăng dần")
-        {
-            Xapxep_sao_load(DropDownList2.SelectedValue);
-        }
-        else if (DropDownList2.SelectedValue == "giảm dần")
-        {
-            Xapxep_sao_load(DropDownList2.SelectedValue);
-        }
-        //khi người dùng chọn xắp xếp giá
-        if (DropDownList1.SelectedValue != null && DropDownList1.SelectedValue == "tăng dần")
-        {
-            XapXep_load(DropDownList1.SelectedValue);
-        }
-            else if(DropDownList1.SelectedValue == "giảm dần")
-	    {
-        XapXep_load(DropDownList1.SelectedValue);
-	    }
-        else
-        {
-            Nap_Trang();
-        }
+        KT_ThayDoiTrang();
     }
-
+    
     private void Nap_Trang()
     {
         SqlConnection connect = new SqlConnection();
@@ -62,13 +42,15 @@ public partial class FEATURE_timkiemkhachsan2 : System.Web.UI.Page
         string diemden = Request.QueryString["DiemDen"];
         if (Request.QueryString["DiemDen"] == null)
         {
-            da = new SqlDataAdapter("select * from KHACHSAN", conn);
+            da = new SqlDataAdapter("KS_HienThi_all", conn);
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
         }
         else
         {
-            da = new SqlDataAdapter("select * from KHACHSAN where DiaDiem LIKE N'" + diemden + "'", conn);
+            da = new SqlDataAdapter("KS_HienThi_DiemDen", conn);
+            da.SelectCommand.CommandType = CommandType.StoredProcedure;
+            da.SelectCommand.Parameters.Add("@DiemDen", SqlDbType.NVarChar).Value = diemden;
         }
-
 
         DataSet ds = new DataSet();
         da.Fill(ds, "KHACHSAN");
@@ -76,9 +58,7 @@ public partial class FEATURE_timkiemkhachsan2 : System.Web.UI.Page
         //Trong đó:
         //DataList1 là tên của DataList
         //DataList1.DataSource = ds.Tables["KHACHSAN"]; 
-        //Dùng để gán dữ liệu của bảng Products vào DataList1 
-
-        
+        //Dùng để gán dữ liệu của bảng Products vào DataList1
         lb_dem.Text = p.Count + " Khách sạn";
         lb_diemden.Text = diemden;
         p.PageSize = 5;
@@ -95,75 +75,18 @@ public partial class FEATURE_timkiemkhachsan2 : System.Web.UI.Page
     protected void btn_truoc_Click(object sender, EventArgs e)
     {
         trangthu--;
-        if (DropDownList2.SelectedValue != null && DropDownList2.SelectedValue == "tăng dần")
-        {
-            Xapxep_sao_load(DropDownList2.SelectedValue);
-        }
-        else if (DropDownList2.SelectedValue == "giảm dần")
-        {
-            Xapxep_sao_load(DropDownList2.SelectedValue);
-        }
-        if (DropDownList1.SelectedValue != null && DropDownList1.SelectedValue == "tăng dần")
-        {
-            XapXep_load(DropDownList1.SelectedValue);
-        }
-        else if (DropDownList1.SelectedValue == "giảm dần")
-        {
-            XapXep_load(DropDownList1.SelectedValue);
-        }
-        else
-        {
-            Nap_Trang();
-        }
+        KT_ThayDoiTrang();
     }
     protected void btn_sau_Click(object sender, EventArgs e)
     {
         trangthu++;
-        if (DropDownList2.SelectedValue != null && DropDownList2.SelectedValue == "tăng dần")
-        {
-           Xapxep_sao_load(DropDownList2.SelectedValue);
-        }
-        else if (DropDownList2.SelectedValue == "giảm dần")
-        {
-            Xapxep_sao_load(DropDownList2.SelectedValue);
-        }
-        if (DropDownList1.SelectedValue != null && DropDownList1.SelectedValue =="tăng dần")
-        {
-            XapXep_load(DropDownList1.SelectedValue);
-        }
-        else if (DropDownList1.SelectedValue == "giảm dần")
-        {
-            XapXep_load(DropDownList1.SelectedValue);
-        }
-        else
-        {
-            Nap_Trang();
-        }
+        KT_ThayDoiTrang();
        
     }
     protected void btn_cuoi_Click(object sender, EventArgs e)
     {
         trangthu = p.PageCount - 1;
-        if (DropDownList2.SelectedValue != null && DropDownList2.SelectedValue == "tăng dần")
-        {
-            Xapxep_sao_load(DropDownList2.SelectedValue);
-        }
-        else if (DropDownList2.SelectedValue == "giảm dần")
-        {
-            Xapxep_sao_load(DropDownList2.SelectedValue);
-        }
-        if (DropDownList1.SelectedValue != null && DropDownList1.SelectedValue == "tăng dần")
-        {
-            XapXep_load(DropDownList1.SelectedValue);
-        }
-        else if (DropDownList1.SelectedValue == "giảm dần")
-        {
-            XapXep_load(DropDownList1.SelectedValue);
-        }
-        else
-        {
-            Nap_Trang(); ;
-        }
+        KT_ThayDoiTrang();
     }
     //sự kiện khi xắp xếp theo giá được lựa chọn
     protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
@@ -206,22 +129,33 @@ public partial class FEATURE_timkiemkhachsan2 : System.Web.UI.Page
 
             if (Request.QueryString["DiemDen"] == null)
             {
-                da = new SqlDataAdapter("select * from KHACHSAN order by Gia ASC", conn);
+                
+                da = new SqlDataAdapter("KS_xapxepgia_dt", conn);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.Add("@DiemDen", SqlDbType.NVarChar).Value = "null";
             }
             else
             {
-                da = new SqlDataAdapter("select * from KHACHSAN where DiaDiem LIKE N'" + diemden + "' Order by Gia ASC", conn);
+                da = new SqlDataAdapter("KS_xapxepgia_dt", conn);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.Add("@DiemDen", SqlDbType.NVarChar).Value = diemden;
             }
         }
         else if (DropDownList1.SelectedValue == "giảm dần")
         {
             if (Request.QueryString["DiemDen"] == null)
             {
-                da = new SqlDataAdapter("select * from KHACHSAN order by Gia DESC", conn);
+                
+                da = new SqlDataAdapter("KS_xapxepgia_gd", conn);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.Add("@DiemDen", SqlDbType.NVarChar).Value = "null";
             }
             else
             {
-                da = new SqlDataAdapter("select * from KHACHSAN where DiaDiem LIKE N'" + diemden + "' Order by Gia DESC", conn);
+                da = new SqlDataAdapter("KS_xapxepgia_gd", conn);
+                da.SelectCommand.CommandType = CommandType.StoredProcedure;
+                da.SelectCommand.Parameters.Add("@DiemDen", SqlDbType.NVarChar).Value = diemden;
+                
             }
         }
             lb_dem.Text = p.Count + " Khách sạn";
@@ -309,7 +243,7 @@ public partial class FEATURE_timkiemkhachsan2 : System.Web.UI.Page
         if (p.IsLastPage == true && p.IsFirstPage == true)
         {
 
-            btn_dau.Enabled = false; //ngược lại
+            btn_dau.Enabled = false;
             btn_truoc.Enabled = false;
             btn_sau.Enabled = false;
             btn_cuoi.Enabled = false;
@@ -337,6 +271,28 @@ public partial class FEATURE_timkiemkhachsan2 : System.Web.UI.Page
         else
         {
             Nap_Trang();
+        }
+    }
+    public void KT_ThayDoiTrang() {
+        if (DropDownList2.SelectedValue != null && DropDownList2.SelectedValue == "tăng dần")
+        {
+            Xapxep_sao_load(DropDownList2.SelectedValue);
+        }
+        else if (DropDownList2.SelectedValue == "giảm dần")
+        {
+            Xapxep_sao_load(DropDownList2.SelectedValue);
+        }
+        if (DropDownList1.SelectedValue != null && DropDownList1.SelectedValue == "tăng dần")
+        {
+            XapXep_load(DropDownList1.SelectedValue);
+        }
+        else if (DropDownList1.SelectedValue == "giảm dần")
+        {
+            XapXep_load(DropDownList1.SelectedValue);
+        }
+        else
+        {
+            Nap_Trang(); ;
         }
     }
 }

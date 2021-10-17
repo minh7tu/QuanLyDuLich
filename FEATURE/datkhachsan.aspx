@@ -18,19 +18,23 @@
         .auto-style3 {
             color: #FF0000;
         }
+        .auto-style4 {
+            height: 56px;
+            width: 297px;
+        }
     </style>
 </head>
 <body>
     <form id="form1" runat="server">
     <div class="container">
-        <img src="../IMAGES/121414.png"  class="rounded mx-auto d-block" style="max-width:200px;"/>
+        <img src="../IMAGES/121414.png"  class="rounded mx-auto d-block" style="max-width:200px; height: 170px; width: 204px;"/>
         <h2 style="text-align:center;">gửi yêu cầu đến khách sạn</h2>
-        <table class="w-100">
+        <table align="center" style="width:76%; height: 437px;">
             <tr>
                 <td class="auto-style1"><strong>Ngày nhận phòng:</strong><br />
                     <asp:TextBox ID="TextBox1" runat="server" type="date"></asp:TextBox>
                 </td>
-                <td class="auto-style1"><strong>Ngày trả phòng:</strong><br />
+                <td class="auto-style4"><strong>Ngày trả phòng:</strong><br />
                     <asp:TextBox ID="TextBox2" runat="server" type="date"></asp:TextBox>
                     <br />
                 </td>
@@ -70,7 +74,7 @@
             <tr>
                 <td class="auto-style2" colspan="3">
         <strong>Yêu cầu đặc biệt:</strong><br />
-        <asp:TextBox ID="TextBox7" runat="server" Height="141px" TextMode="MultiLine" Width="1067px"></asp:TextBox>
+        <asp:TextBox ID="TextBox7" runat="server" Height="141px" TextMode="MultiLine" Width="793px"></asp:TextBox>
                 </td>
             </tr>
             <tr>
