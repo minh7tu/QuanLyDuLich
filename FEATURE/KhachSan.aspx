@@ -35,7 +35,7 @@
 </div>
         
     <form id="Form1" runat="server">
-        <div class="container" style="width:458px; border:1px solid black; margin-top:10px; border-radius:10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); padding-bottom:10px; height: 149px;">
+        <div class="container" style="width:451px; border:1px solid black; margin-top:10px; border-radius:10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); padding-bottom:10px; height: 153px;">
             <h4 >Tìm kiếm khách sạn giá rẻ</h4>
             <hr style="margin-top:-5px;" />
         <asp:DropDownList ID="DropDownList1" runat="server" Width="430px" CssClass="align-items-md-center" align="center" ToolTip="chọn điểm đến của bạn" Height="24px">
@@ -49,14 +49,16 @@
             <asp:CheckBox ID="cb_all" runat="server" AutoPostBack="True" OnCheckedChanged="cb_all_CheckedChanged" Text="hiển thị tất cả" />
            
             <br />
-            &nbsp;<br />
+            Số người<br />
         <asp:ScriptManager ID="ScriptManager1" runat="server">
 
         </asp:ScriptManager>
         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
             <ContentTemplate>
                  <asp:Button ID="btn_timkiem" runat="server" CssClass="btn btn-warning buttoncanle" OnClick="btn_timkiem_Click" Text="Tìm Kiếm" />
-                <br />
+                <asp:TextBox ID="txt_dem" runat="server" Width="59px" Enabled="False"></asp:TextBox>
+                <asp:Button ID="bnt_cong" runat="server" Text="+" Width="35px" OnClick="bnt_cong_Click" />
+                 <asp:Button ID="btn_tru" runat="server"  Text="-" Width="35px" OnClick="btn_tru_Click" />
             </ContentTemplate>
         </asp:UpdatePanel>
         
@@ -160,7 +162,7 @@
 </a> 
 
             </p>
-			<br>
+			<br/>
 		</div>
 		<div class="col-lg-6">
            <div class="container">

@@ -8,10 +8,18 @@ using System.Data.SqlClient;
 using System.Web.Configuration;
 public partial class FEATURE_KhachSan : System.Web.UI.Page
 {
-    
+    static int count = 1;
     protected void Page_Load(object sender, EventArgs e)
     {
-       
+        txt_dem.Text = count.ToString();
+        if (txt_dem.Text == "0")
+        {
+            btn_tru.Enabled = false;
+        }
+        else
+        {
+            btn_tru.Enabled = true;
+        }
     }
 
     protected void btn_timkiem_Click(object sender, EventArgs e)
@@ -43,6 +51,32 @@ public partial class FEATURE_KhachSan : System.Web.UI.Page
         else
         {
             DropDownList1.Enabled = true;
+        }
+    }
+    protected void bnt_cong_Click(object sender, EventArgs e)
+    {
+        count++;
+        txt_dem.Text = count.ToString();
+        if (txt_dem.Text == "1")
+        {
+            btn_tru.Enabled = false;
+        }
+        else
+        {
+            btn_tru.Enabled = true;
+        }
+    }
+    protected void btn_tru_Click(object sender, EventArgs e)
+    {
+        count--;
+        txt_dem.Text = count.ToString();
+        if (txt_dem.Text == "0")
+        {
+            btn_tru.Enabled = false;
+        }
+        else
+        {
+            btn_tru.Enabled = true;
         }
     }
 }
