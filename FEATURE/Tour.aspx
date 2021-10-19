@@ -2,6 +2,14 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TieuDe" Runat="Server">
     <title>Tour</title>
+    <script>
+        function msgError() {
+            alert("Hiện server đang bận , vui lòng thử lại sau ^^");
+        }
+        function msgSuccess() {
+            alert("Thao tác thành công");
+        }
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="NoiDung" Runat="Server">
     <form runat="server">
