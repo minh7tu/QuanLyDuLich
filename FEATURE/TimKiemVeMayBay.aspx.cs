@@ -20,7 +20,7 @@ public partial class FEATURE_TimKiemVeMayBay : System.Web.UI.Page
         connect = new SqlConnection(conn);
         connect.Open();
         string diemden = Request.QueryString["diemden"];
-        SqlDataAdapter da = new SqlDataAdapter("select * from VEMAYBAY Where DiaDiemD like N'" + diemden + "%'", conn);
+        SqlDataAdapter da = new SqlDataAdapter("select * from VEMAYBAY Where DiaDiemD like N'%" + diemden + "%'", conn);
      //  string diemdi = Request.QueryString["diemdi"];
       // SqlDataAdapter da = new SqlDataAdapter("select * from VEMAYBAY Where DiaDiemKH like N'" + diemdi + "%'", conn);
         DataSet ds = new DataSet();
