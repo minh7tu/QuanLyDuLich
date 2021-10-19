@@ -11,4 +11,8 @@ public partial class FEATURE_VeMayBay : System.Web.UI.Page
     {
 
     }
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("TimKiemVeMayBay.aspx?diemden=");
+    }
 }
