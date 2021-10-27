@@ -79,6 +79,7 @@
     <div class="contain">
         <div class="menu">
             <ul>
+                <li><a href="NhaHang.aspx">Trang Chủ</a></li>
                 <li><a href="QuanLiNH.aspx">Quản Lí Nhà Hàng</a></li>
                 <li><a href="TimKiemNH.aspx">Tìm Kiếm Nhà Hàng</a></li>
                 <li><a href="DatNhaHang.aspx">Đặt Nhà Hàng</a></li>
@@ -95,8 +96,8 @@
                     <tr>
                         <td class="auto-style10">
                            <ul>
-                            <li><a href="https://smartapp.edu.vn/template_site/website-gioi-thieu-nha-hang">Giới Thiệu</a></li>
-                            <li><a href="#">Danh Mục</a></li>
+                            <li><a href="GioiThieu.aspx">Giới Thiệu</a></li>
+                            <li><a href="DanhMuc.aspx">Danh Mục</a></li>
                             <li><a href="TinTuc.aspx">Tin Tức</a></li>
                             <li><a href="DanhGia.aspx">Đánh Giá</a></li>
                            </ul>
