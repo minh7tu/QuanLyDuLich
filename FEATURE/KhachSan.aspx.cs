@@ -11,6 +11,8 @@ public partial class FEATURE_KhachSan : System.Web.UI.Page
     static int count = 1;
     protected void Page_Load(object sender, EventArgs e)
     {
+        txt_timkiemks.Enabled = false;
+        txt_timkiemks.Attributes.Add("placeholder", "tìm kiếm theo tên khách sạn");
         txt_dem.Text = count.ToString();
         if (txt_dem.Text == "0")
         {
@@ -24,9 +26,12 @@ public partial class FEATURE_KhachSan : System.Web.UI.Page
 
     protected void btn_timkiem_Click(object sender, EventArgs e)
     {
+        if (ck_tenks.Checked)
+        {
+            Response.Redirect("timkiemkhachsan2.aspx?tenks=" + txt_timkiemks.Text);
+        }
        
-       
-         if(DropDownList1.SelectedValue.Equals("Điểm Đến") && cb_all.Checked == false)
+        else  if(DropDownList1.SelectedValue.Equals("Điểm Đến") && cb_all.Checked == false)
         {
             Response.Write("<script>alert('hãy chọn nơi bạn muốn tìm');</script>");
         }
@@ -77,6 +82,19 @@ public partial class FEATURE_KhachSan : System.Web.UI.Page
         else
         {
             btn_tru.Enabled = true;
+        }
+    }
+    protected void ck_tenks_CheckedChanged(object sender, EventArgs e)
+    {
+        if (ck_tenks.Checked)
+        {
+            txt_timkiemks.Enabled = true;
+            DropDownList1.Enabled = false;
+        }
+        else
+        {
+            txt_timkiemks.Enabled = false;
+            DropDownList1.Enabled = true;
         }
     }
 }

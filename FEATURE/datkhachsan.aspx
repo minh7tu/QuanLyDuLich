@@ -23,6 +23,7 @@
             width: 297px;
         }
     </style>
+    
 </head>
 <body>
     <form id="form1" runat="server">
@@ -32,10 +33,10 @@
         <table align="center" style="width:76%; height: 437px;">
             <tr>
                 <td class="auto-style1"><strong>Ngày nhận phòng:</strong><br />
-                    <asp:TextBox ID="TextBox1" runat="server" type="date"></asp:TextBox>
+                    <asp:TextBox ID="txt_ngaynhan" runat="server" type="date">123</asp:TextBox>
                 </td>
                 <td class="auto-style4"><strong>Ngày trả phòng:</strong><br />
-                    <asp:TextBox ID="TextBox2" runat="server" type="date"></asp:TextBox>
+                    <asp:TextBox ID="txt_ngaytra" runat="server" type="date"></asp:TextBox>
                     <br />
                 </td>
                 <td class="auto-style1"><strong>số lượng:</strong>
@@ -45,7 +46,7 @@
                         <ContentTemplate>
                             <asp:TextBox ID="txt_soluong" runat="server" Width="56px" Enabled="False" CssClass="text-center"></asp:TextBox>
                             <asp:Button ID="Button1" runat="server" Text="+" CssClass="btn-primary" OnClick="Button1_Click" Width="50px" CausesValidation="False"/>
-                            <asp:Button ID="btn_tru" runat="server" CssClass="btn-primary" OnClick="btn_tru_Click" Text="-" Width="50px" CausesValidation="False" />
+                            <asp:Button  ID="btn_tru" runat="server" CssClass="btn-primary" OnClick="btn_tru_Click" Text="-" Width="50px" CausesValidation="False" />
                         </ContentTemplate>
                     </asp:UpdatePanel>
                     
@@ -98,5 +99,11 @@
         <br />
     </div>
     </form>
+    <script type="text/javascript">
+        function Curen() {
+            document.getElementById("btn_tru").style.cursor = "wait";
+        }
+    </script>
 </body>
+    
 </html>

@@ -16,6 +16,10 @@
         .auto-style8 {
             width: 448px;
         }
+        .auto-style9 {
+            width: 448px;
+            height: 74px;
+        }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="NoiDung" Runat="Server">
@@ -37,7 +41,7 @@
                 <asp:ListItem>giảm dần</asp:ListItem>
             </asp:DropDownList>
         </h5>
-        <asp:DataList ID="DataList1" runat="server" BackColor="White" BorderColor="#FF66FF" BorderStyle="None" BorderWidth="2px" CellPadding="3"   Font-Strikeout="False" Font-Underline="False" ForeColor="White"   CellSpacing="29" ShowFooter="False" ShowHeader="False" Font-Bold="False" Font-Italic="False" Font-Overline="False"  GridLines="Vertical" ToolTip="ấn vào để xem chi tiết" ViewStateMode="Disabled"  CssClass="data_view"  align="center">
+        <asp:DataList ID="DataList1" runat="server" BackColor="White" BorderColor="#FF66FF" BorderStyle="None" BorderWidth="2px" CellPadding="10"   Font-Strikeout="False" Font-Underline="False" ForeColor="White"   CellSpacing="29" ShowFooter="False" ShowHeader="False" Font-Bold="False" Font-Italic="False" Font-Overline="False"  GridLines="Vertical" ToolTip="ấn vào để xem chi tiết" ViewStateMode="Disabled"  CssClass="data_view"  align="center">
             <ItemStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" Font-Bold="False" Font-Italic="False" Font-Overline="False" Font-Strikeout="False" Font-Underline="False" HorizontalAlign="Center" />
             <ItemTemplate>
                 <table class="auto-style1 data_view" style="text-align:center;">
@@ -45,33 +49,34 @@
                         <td class="auto-style5" rowspan="8">
                             <asp:Image ID="Image1" runat="server" Height="216px" ImageUrl='<%# Eval("Anh") %>' Width="284px" />
                         </td>
-                        <td class="auto-style8">Tên Khách sạn:<asp:Label ID="lb_tenks" runat="server" Text='<%# Eval("TenKS") %>'></asp:Label>
+                        <td class="auto-style9"><strong>Tên Khách</strong> <strong>sạn:</strong><asp:Label ID="lb_tenks" runat="server" Text='<%# Eval("TenKS") %>'></asp:Label>
                         </td>
                     </tr>
                     <tr>
-                        <td class="auto-style8">Địa Chỉ:<asp:Label ID="lb_diachi" runat="server" Text='<%# Eval("DiaChi") %>'></asp:Label>
+                        <td class="auto-style8"><strong>Địa Chỉ:</strong><asp:Label ID="lb_diachi" runat="server" Text='<%# Eval("DiaChi") %>'></asp:Label>
                         </td>
                     </tr>
                     <tr>
-                        <td class="auto-style6">Số Điện Thoại:<asp:Label ID="lb_sdt" runat="server" Text='<%# Eval("SDT") %>'></asp:Label>
+                        <td class="auto-style6"><strong>Số Điện Thoại:</strong><asp:Label ID="lb_sdt" runat="server" Text='<%# Eval("SDT") %>'></asp:Label>
                         </td>
                     </tr>
                     <tr>
-                        <td class="auto-style8">Xếp Loại:<asp:Label ID="lb_xeploai" runat="server" Text='<%# Eval("XepLoai") %>'></asp:Label>
+                        <td class="auto-style8"><strong>Xếp Loại</strong>:<asp:Label ID="lb_xeploai" runat="server" Text='<%# Eval("XepLoai") %>'></asp:Label>
                         </td>
                     </tr>
                     <tr>
-                        <td class="auto-style8">Địa Điểm:<asp:Label ID="lb_diadiem" runat="server" Text='<%# Eval("DiaDiem") %>'></asp:Label>
+                        <td class="auto-style8"><strong>Địa Điểm</strong>:<asp:Label ID="Label1" runat="server" Text='<%# Eval("DiaDiem") %>'></asp:Label>
                         </td>
                     </tr>
                     <tr>
-                        <td class="auto-style8">Giá(1Đêm):<br />
+                        <td class="auto-style8"><strong>Giá(1Đêm):</strong><br />
                             <asp:Label ID="lb_gia" runat="server" Text='<%# Eval("Gia") %>'></asp:Label>
                         </td>
                     </tr>
                     <tr>
                         <td class="auto-style8">
                             <asp:HyperLink ID="HyperLink2" runat="server">xem chi tiết</asp:HyperLink>
+                            <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl='<%# Eval("Chitiet") %>'>ấn vào để xem</asp:HyperLink>
                         </td>
                     </tr>
                     <tr>

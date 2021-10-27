@@ -14,8 +14,16 @@ public partial class FEATURE_timkiemkhachsan2 : System.Web.UI.Page
     public static int trangthu = 0;
     protected void Page_Load(object sender, EventArgs e)
     {
+       string tenks = Request.QueryString["tenks"];
+        if (tenks != null)
+        {
+            TimkiemTenKS();
+        }
+        else
+        {
+            Nap_Trang();
+        }
         
-        Nap_Trang();
        
     }
     //sự kiện khi người dùng ấn vào nút đặt
@@ -290,9 +298,38 @@ public partial class FEATURE_timkiemkhachsan2 : System.Web.UI.Page
         {
             XapXep_load(DropDownList1.SelectedValue);
         }
+        else if (Request.QueryString["tenks"] != null)
+        {
+            TimkiemTenKS();
+        }
         else
         {
-            Nap_Trang(); ;
+            Nap_Trang(); 
         }
+    }
+    public void TimkiemTenKS() {
+        SqlConnection connect = new SqlConnection();
+        string conn = WebConfigurationManager.ConnectionStrings["QuanLyDuLich"].ConnectionString;
+        connect = new SqlConnection(conn);
+        connect.Open();
+
+        string tenks = Request.QueryString["tenks"];
+        da = new SqlDataAdapter("KS_timkiemtenKS", conn);
+        da.SelectCommand.CommandType = CommandType.StoredProcedure;
+        da.SelectCommand.Parameters.Add("@diemden", SqlDbType.NVarChar).Value = tenks;
+        lb_dem.Text = p.Count + " Khách sạn";
+        lb_diemden.Text = tenks;
+        p.PageSize = 5;
+        p.CurrentPageIndex = trangthu;
+        p.AllowPaging = true;
+        btn_dau.Enabled = true; btn_truoc.Enabled = true; btn_sau.Enabled = true; btn_cuoi.Enabled = true;
+        KT_PhanTrang(p);
+        txt_trang.Text = (trangthu + 1) + "/" + p.Count;
+
+        DataSet ds = new DataSet();
+        da.Fill(ds, "KHACHSAN");
+        p.DataSource = ds.Tables["KHACHSAN"].DefaultView;
+        DataList1.DataSource = p;
+        DataList1.DataBind();
     }
 }

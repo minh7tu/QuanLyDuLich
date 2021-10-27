@@ -8,7 +8,7 @@
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="NoiDung" Runat="Server">
-   <div class="container-fluid" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+    <div class="container-fluid" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
     <!-- Carousel -->
 <div id="slides" class="carousel slide" data-ride="carousel">
 	<ul class="carousel-indicators">
@@ -35,9 +35,12 @@
 </div>
         
     <form id="Form1" runat="server">
-        <div class="container" style="width:451px; border:1px solid black; margin-top:10px; border-radius:10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); padding-bottom:10px; height: 153px;">
+        <div class="container" style="width:451px; border:1px solid black; margin-top:10px; border-radius:10px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); padding-bottom:10px; height: 230px;">
             <h4 >Tìm kiếm khách sạn giá rẻ</h4>
             <hr style="margin-top:-5px;" />
+        
+        <asp:TextBox ID="txt_timkiemks" runat="server" Width="432px"></asp:TextBox>
+        <asp:CheckBox ID="ck_tenks" runat="server" AutoPostBack="True" OnCheckedChanged="ck_tenks_CheckedChanged" Text="tìm kiếm theo tên hoặc địa điểm" />
         <asp:DropDownList ID="DropDownList1" runat="server" Width="430px" CssClass="align-items-md-center" align="center" ToolTip="chọn điểm đến của bạn" Height="24px">
              <asp:ListItem Selected="True" >Điểm Đến</asp:ListItem>
                     <asp:ListItem>Nha Trang</asp:ListItem>
@@ -78,6 +81,8 @@
 		</div>
 	</div>
 </div>
+        <br />
+        <br />
     <div class="container-fluid padding">
 	<div class="row text-center padding" style="max-width:790px; margin:auto;">
 		<div class="col-xs-12 col-sm-6 col-md-4 ">
@@ -98,12 +103,13 @@
 			<h3 class="display-4" style="color:black; font-size:26px;">Khám phá các chủ đề hấp dẫn</h3>
 		</div>
 		<!-- Horizontal Rule -->
-		
+		<br />
 		<div class="col-12">
 			<p style="font-size:15px;"> Xem ngay những chủ đề khách sạn hấp dẫn đang được nhiều du khách quan tâm nhất! </p>
 		</div>
 	</div>
 </div>
+        <br />
   <!-- Carousel -->
 <div id="Div1" class="carousel slide" data-ride="carousel">
 	<ul class="carousel-indicators">
