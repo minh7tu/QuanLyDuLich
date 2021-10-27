@@ -17,28 +17,12 @@ public partial class FEATURE_Tour : System.Web.UI.Page
     {
         try
         {
-            //MQTT.Connect();
-            Response.Redirect("TimKiem_Tour.aspx?DiemXP=" + ddlCaption.SelectedItem.Text + "?DiemDen=" + txtNameOfTour.Text + "?ThoiGian=" + txtDate.Text);
+            Response.Redirect("TimKiem_Tour.aspx?TenTour=" + txtNameOfTour.Text);
             ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "msgSuccess()", true);
         }
         catch
         {
             ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", "msgError()", true);
         }
-        //string findTour = "select * from TOUR where DiemXP=N'" + ddlCaption.SelectedItem.Text + "',";
-        //findTour += "DiemDen=N'" + txtNameOfTour.Text + "',ThoiGian='" + txtDate.Text + "'";
-
-        //SqlCommand scd = new SqlCommand(findTour, MQTT.connect);
-
-        //SqlDataReader data = scd.ExecuteReader();
-
-        //if (data.Read())
-        //{
-
-        //}
-        //else
-        //{
-
-        //}
     }
 }
