@@ -6,45 +6,35 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Web.Configuration;
+using System.Data;
+
 
 
 public partial class FEATURE_QuanLiNH : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!Page.IsPostBack)
-        {
-            ddlGia.SelectedIndex = 0;
-        }
+        SqlConnection connect = new SqlConnection();
+        string conn = WebConfigurationManager.ConnectionStrings["QuanLyDuLich"].ConnectionString;
+        connect = new SqlConnection(conn);
+        connect.Open();
+        SqlDataAdapter da;
+        da = new SqlDataAdapter("select * from NHAHANG", conn);
+        DataSet ds = new DataSet();
+        da.Fill(ds, "NHAHANG");
+        DataList1.DataSource = ds.Tables["NhaHang"];
+        DataList1.DataSourceID = string.Empty;
+        DataList1.DataBind();
     }
-    protected void btnTimKiem_Click(object sender, EventArgs e)
+    protected void Button1_Click(object sender, EventArgs e)
     {
-        string chuoiketnoi = WebConfigurationManager.ConnectionStrings["QuanLyDuLich"].ConnectionString;
-        SqlConnection myconn = new SqlConnection(chuoiketnoi);
-        myconn.Open();
-        string ds = "";
-        for (int i = 0; i < ddlGia.Items.Count; i++)
+        if (txtMonAn.Text.Equals("MonAn"))
         {
-             ds = ddlGia.SelectedValue;
+            Response.Write("<script>alert('hãy chọn món ăn');</script>");
         }
-        string monan = "";
-        if (ckbMon1.Checked && ckbMonAn.Checked)
+        else
         {
-            monan = ckbMon1.Checked.ToString();
-            monan = ckbMonAn.Checked.ToString();
-        }
-        SqlCommand cmd = new SqlCommand("TimKiem", myconn);
-        cmd.CommandType = System.Data.CommandType.StoredProcedure;
-        cmd.Parameters.AddWithValue("@ThucDon",txtThucDon.Text);
-        cmd.Parameters.AddWithValue("@Gia",ds);
-        cmd.Parameters.AddWithValue("@MonAn", monan);
-        try {
-            cmd.ExecuteNonQuery();
-            Response.Write("KetQuaTK.aspx");
-        }
-        catch (Exception)
-        {
-            Response.Write("Không tìm thấy yêu cầu");
+            Response.Redirect("KetQuaTK.aspx?MonAn=" + txtMonAn.Text);
         }
     }
 }

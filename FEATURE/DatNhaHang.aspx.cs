@@ -28,8 +28,9 @@ public partial class FEATURE_TK : System.Web.UI.Page
             if(ddlLoaiNH.Items[i].Selected)
              ds = ddlLoaiNH.SelectedValue;
         }
-        //string sql = "insert into NHAHANG values('"+txtMaNH.Text+"',N'" + txtTenNH.Text + "','" + txtTGBD.Text + "','" + txtTGKT.Text + "',N'" +txtDiaDiem.Text+ "',N'"+txtSoNguoi.Text + "','"+txtSdt.Text+"',N'" + ds + "')";
+        //string sql = "insert into NHAHANG values('" + txtMaNH.Text + "',N'" + txtTenNH.Text + "','" + txtTGBD.Text +"','" + txtTGKT.Text + "',N'" + txtDiaDiem.Text + "',N'" + txtSoNguoi + "','" + txtSdt.Text + "',N'" + ds + "')";
         //khai báo đối tượng command
+        
         SqlCommand cmd = new SqlCommand("DatNH",myconn);
         cmd.CommandType = System.Data.CommandType.StoredProcedure;
         cmd.Parameters.AddWithValue("@MaNH", txtMaNH.Text);
@@ -40,6 +41,7 @@ public partial class FEATURE_TK : System.Web.UI.Page
         cmd.Parameters.AddWithValue("@SoNguoi", txtSoNguoi.Text);
         cmd.Parameters.AddWithValue("@Sdt", txtSdt.Text);
         cmd.Parameters.AddWithValue("@LoaiNH", ds); 
+        //SqlCommand cmd = new SqlCommand(sql, myconn);
         try
         {
             cmd.ExecuteNonQuery();
@@ -52,11 +54,11 @@ public partial class FEATURE_TK : System.Web.UI.Page
             txtSoBan.Text = "";
             ddlLoaiNH.SelectedIndex = 0;
             txtDiaDiem.Text = "";
-            Response.Write("Bạn đặt được nhà hàng thành công");
+            Response.Write("<script>alert('Bạn đặt nhà hàng thành công');</script>");
         }
         catch(Exception)
         {
-            Response.Write("Bạn Không đặt được nhà hàng");
+            Response.Write("<script>alert('Bạn đặt nhà hàng thất bại');</script>");
             txtMaNH.Text = "";
             txtTenNH.Text = "";
             txtSdt.Text = "";

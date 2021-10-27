@@ -4,8 +4,6 @@
     <style type="text/css">
         .auto-style12
         {
-            width: 70%;
-            border: 1px solid #FF0000;
             width:700px;
         }
         .auto-style13
@@ -40,7 +38,7 @@
     }
     .auto-style26
     {
-        width: 294px;
+        width: 291px;
         height: 65px;
     }
     .auto-style29
@@ -52,7 +50,7 @@
     .auto-style30
     {
         height: 43px;
-        width: 294px;
+        width: 291px;
     }
     .auto-style31
     {
@@ -63,7 +61,7 @@
     .auto-style32
     {
             height: 47px;
-            width: 294px;
+            width: 291px;
         }
     .auto-style33
     {
@@ -74,7 +72,7 @@
     .auto-style34
     {
         height: 48px;
-        width: 294px;
+        width: 291px;
     }
     .auto-style35
     {
@@ -85,7 +83,7 @@
     .auto-style36
     {
         height: 35px;
-        width: 294px;
+        width: 291px;
     }
     .auto-style37
     {
@@ -96,7 +94,7 @@
     .auto-style38
     {
         height: 44px;
-        width: 294px;
+        width: 291px;
     }
     .auto-style39
     {
@@ -107,7 +105,7 @@
     .auto-style40
     {
         height: 36px;
-        width: 294px;
+        width: 291px;
     }
     </style>
 </asp:Content>
@@ -178,6 +176,6 @@
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="NoiDungPhu" Runat="Server">
     <p>
-        <img alt="" class="auto-style20" src="../IMAGES/md_2020_06_29______81c7c97dff2721aa8f70860ca8f9aeb5.png" /></p>
+        <img alt="" class="auto-style20" src="../IMAGES/md_2020_06_29______81c7c97dff2721aa8f70860ca8f9aeb5.png" style="width: 247px; height: 400px;" /></p>
 </asp:Content>
 

@@ -6,36 +6,30 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data.SqlClient;
 using System.Web.Configuration;
+using System.Data;
 
 public partial class FEATURE_KetQuaTK : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        string chuoiketnoi = WebConfigurationManager.ConnectionStrings["QuanLyDuLich"].ConnectionString;
-        SqlConnection myconn = new SqlConnection(chuoiketnoi);
-        try
+        SqlConnection connect = new SqlConnection();
+        string conn = WebConfigurationManager.ConnectionStrings["QuanLyDuLich"].ConnectionString;
+        connect = new SqlConnection(conn);
+        connect.Open();
+        SqlDataAdapter da;
+        string monan = Request.QueryString["MonAn"];
+        if (Request.QueryString["MonAn"] == null)
         {
-            myconn.Open();
-            string strSQL = "Select MaNH,TenNH,DiaDiem,ChiPhi,XepHang,DanhGia,MonAn from NHAHANG";
-            SqlCommand cmd = new SqlCommand(strSQL, myconn);
-            SqlDataReader data = cmd.ExecuteReader();
-            while (data.Read())
-            {
-                int cells = 5;
-                TableRow r = new TableRow();
-                for (int j = 0; j < cells; j++)
-                {
-                    TableCell c = new TableCell();
-                    c.Text = data[j].ToString();
-                    r.Cells.Add(c);
-                }
-                Table1.Rows.Add(r);
-            }
-            myconn.Close();
+            da = new SqlDataAdapter("select * from NHAHANG", conn);
         }
-        catch (Exception)
+        else
         {
-            Response.Write("Không kết nối được đến  CSDL");
+            da = new SqlDataAdapter("select * from NHAHANG where MonAn LIKE N'" + monan + "'", conn);
         }
+        DataSet ds = new DataSet();
+        da.Fill(ds, "NHAHANG");
+        DataList1.DataSource = ds.Tables["NHAHANG"];
+        DataList1.DataSourceID = string.Empty; 
+        DataList1.DataBind();
     }
 }

@@ -123,14 +123,19 @@
         .auto-style23
         {
             width: 250px;
-            height: 185px;
+            height: 216px;
         }
         .auto-style24
         {
-            height: 185px;
+            height: 216px;
             float: left;
             margin: 0 auto;
             padding: 5px 7px 2px 4px;
+        }
+        .anhphu1
+        {
+           width: 225px;
+           height: 311px;
         }
         </style>
     
@@ -248,30 +253,8 @@
 
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="NoiDungPhu" Runat="Server">
-    <div class="container-fluid" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
-    <!-- Carousel -->
-<div id="slides" class="carousel slide" data-ride="carousel">
-	<ul class="carousel-indicators">
-		<li data-target="#slides" data-slide-to="0" class="active"></li>
-		<li data-target="#slides" data-slide-to="1"></li>
-		<li data-target="#slides" data-slide-to="2"></li>		
-		<li data-target="#slides" data-slide-to="3"></li>
-	</ul>
-	<div class="carousel-inner">
-		<div class="carousel-item active">
-            <img src="../IMAGES/Square–Novotel-Premier-Han-River-nha-hang-da-nang.jpg" style="width: 247px; height: 368px;"/>	
-		</div>
-		<div class="carousel-item">
-            <img src="../IMAGES/The-Rachel-Restaurant-Bar-nha-hang-da-nang.jpg" style="width: 247px; height: 368px;"/>
-		</div>
-		<div class="carousel-item">
-            <img src="../IMAGES/Restaurant-2-1.jpg" style="width: 247px; height: 368px;"/>
-		</div>
-		<div class="carousel-item">
-            <img src="../IMAGES/images%20(6).jpg" style="width: 247px; height: 300px;"/>
-		</div>
-	</div>
-</div>
-</div>
+    <img src="../IMAGES/24416c7b5af40.png_list.jpg" class="anhphu1" />
+    <img src="../IMAGES/24416c7b5af40.png_list.jpg" class="anhphu1" /> 
+    <img src="../IMAGES/24416c7b5af40.png_list.jpg" class="anhphu1" />   
 </asp:Content>
 

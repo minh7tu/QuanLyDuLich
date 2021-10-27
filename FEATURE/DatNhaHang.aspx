@@ -57,7 +57,7 @@
     <tr>
         <td class="auto-style14">Thời gian bắt đầu:</td>
         <td>
-            <asp:TextBox ID="txtTGBD" runat="server" AutoPostBack="True"></asp:TextBox>
+            <asp:TextBox ID="txtTGBD" runat="server" AutoPostBack="True" type="Date"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ControlToValidate="txtTGBD" ErrorMessage="Không được phép bỏ trống"></asp:RequiredFieldValidator>
             <asp:RangeValidator ID="RangeValidator1" runat="server" ControlToValidate="txtTGBD" ErrorMessage="ngày không hợp lệ" MaximumValue="30/12/2099" MinimumValue="01/01/2021"></asp:RangeValidator>
         </td>
@@ -65,7 +65,7 @@
     <tr>
         <td class="auto-style14">Thời Gian Kết Thúc:</td>
         <td>
-            <asp:TextBox ID="txtTGKT" runat="server" AutoPostBack="True"></asp:TextBox>
+            <asp:TextBox ID="txtTGKT" runat="server" AutoPostBack="True" type="Date"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" ControlToValidate="txtTGKT" ErrorMessage="Không được phép bỏ trống"></asp:RequiredFieldValidator>
             <asp:RangeValidator ID="RangeValidator3" runat="server" ControlToValidate="txtTGKT" ErrorMessage="ngày không hợp lệ" MaximumValue="30/12/2099" MinimumValue="01/01/2021"></asp:RangeValidator>
         </td>
@@ -84,7 +84,8 @@
         </td>
     </tr>
     <tr>
-        <td class="auto-style14">Số điện thoại:<td>
+        <td class="auto-style14">Số điện thoại:</td>
+        <td>
             <asp:TextBox ID="txtSdt" runat="server" AutoPostBack="True"></asp:TextBox>
             <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtSdt" ErrorMessage="Không được phép bỏ trống"></asp:RequiredFieldValidator>
         </td>
@@ -110,6 +111,7 @@
     <tr>
         <td class="auto-style18" colspan="2">
             <asp:Button ID="btnDatNH" runat="server" Text="Đặt Nhà Hàng" OnClick="btnDatNH_Click"  />
+            <asp:ValidationSummary ID="ValidationSummary1" runat="server" ShowMessageBox="True" ShowSummary="False" />
         </td>
     </tr>
 </table>

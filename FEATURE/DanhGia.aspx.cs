@@ -51,11 +51,11 @@ public partial class FEATURE_DanhGia : System.Web.UI.Page
         try
         {
             cmd.ExecuteNonQuery();
-            Response.Write("Quý khách đánh giá thành công");
+            Response.Write("<script>alert('Quý Khách đánh giá thành công');</script>");
         }
         catch (Exception)
         {
-            Response.Write("Đánh giá chưa thành công");
+            Response.Write("<script>alert('Quý khách đánh giá thất bại');</script>");
         }
     }
 }

@@ -1,34 +1,34 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MASTER/NhaHang.master" AutoEventWireup="true" CodeFile="KetQuaTK.aspx.cs" Inherits="FEATURE_KetQuaTK" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <style type="text/css">
+        .auto-style12
+        {
+            width: 100%;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="NoiDung" Runat="Server">
     <h1 class="auto-style13" style="text-align: center">Kết Quả Tìm Kiếm Của Quý Khách</h1>
-    <asp:Table ID="Table1" runat="server" Height="19px" Width="700px" BackColor="White" BorderColor="#3366FF" BorderStyle="Solid" BorderWidth="1px" ForeColor="#0066FF" GridLines="Vertical" >
-        <asp:TableRow runat="server" BackColor="#FF99FF" BorderColor="#3399FF" BorderStyle="Solid" BorderWidth="1px" HorizontalAlign="Center" TableSection="TableHeader">
-            <asp:TableCell runat="server">Mã Nhà Hàng</asp:TableCell>
-            <asp:TableCell runat="server">Tên Nhà Hàng</asp:TableCell>
-            <asp:TableCell runat="server">Địa Điểm</asp:TableCell>
-            <asp:TableCell runat="server">Chi Phí</asp:TableCell>
-            <asp:TableCell runat="server">Xếp Hạng</asp:TableCell>
-            <asp:TableCell runat="server">Đánh Giá</asp:TableCell>
-            <asp:TableCell runat="server">Món Ăn</asp:TableCell>
-        </asp:TableRow>
-    </asp:Table>
-    <style>
-        .auto-style12
-        {
-            width: 600px;
-            height: 400px;
-        }
-    
-        .auto-style13
-        {
-            color: #FF3300;
-            font-size: large;
-        }
-    
-    </style>
+    <p>
+    <asp:DataList ID="DataList1" runat="server" RepeatColumns="2">
+                    <ItemTemplate>
+                        <table class="auto-style22">
+                            <tr>
+                                <td class="auto-style23">
+                                    <asp:Image ID="Image1" runat="server" Height="150px" ImageUrl='<%# Eval("Anh") %>' Width="128px" />
+                                </td>
+                                <td>
+                                    Tên Nhà Hàng:<asp:HyperLink ID="HyperLink1" runat="server" Text='<%# Eval("TenNH") %>'></asp:HyperLink><br />
+                                    Địa Điểm:<asp:Label ID="Label1" runat="server" Text='<%# Eval("DiaDiem") %>'></asp:Label><br />
+                                    Món:<asp:Label ID="Label5" runat="server" Text='<%# Eval("MonAn") %>'></asp:Label><br />
+                                    Giá:<asp:Label ID="Label4" runat="server" Text='<%# Eval("ChiPhi") %>'></asp:Label>
+                                </td>
+                            </tr>
+                        </table>
+                    </ItemTemplate>
+                </asp:DataList>
+    </p>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="NoiDungPhu" Runat="Server">
     <p>
