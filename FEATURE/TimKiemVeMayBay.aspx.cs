@@ -20,9 +20,10 @@ public partial class FEATURE_TimKiemVeMayBay : System.Web.UI.Page
         connect = new SqlConnection(conn);
         connect.Open();
         string diemden = Request.QueryString["diemden"];
-        SqlDataAdapter da = new SqlDataAdapter("select * from VEMAYBAY Where DiaDiemD like N'%" + diemden + "%'", conn);
-     //  string diemdi = Request.QueryString["diemdi"];
-      // SqlDataAdapter da = new SqlDataAdapter("select * from VEMAYBAY Where DiaDiemKH like N'" + diemdi + "%'", conn);
+        SqlDataAdapter da = new SqlDataAdapter("VMB_Diemden", conn);
+        da.SelectCommand.CommandType = CommandType.StoredProcedure;
+        da.SelectCommand.Parameters.Add("@DiemDen", SqlDbType.NVarChar).Value = diemden;
+    
         DataSet ds = new DataSet();
         //đổ dữ liệu của adaptẻ cho datáet
         da.Fill(ds, "VEMAYBAY");
@@ -37,5 +38,10 @@ public partial class FEATURE_TimKiemVeMayBay : System.Web.UI.Page
     
     
     
+    }
+    
+    protected void btnDatVeMayBay_Click1(object sender, EventArgs e)
+    {
+        Response.Redirect("VeMayBay.aspx");
     }
 }

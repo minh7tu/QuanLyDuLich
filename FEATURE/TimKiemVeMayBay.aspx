@@ -39,8 +39,8 @@
                 <br />
                 <table align="center" cellpadding="3" cellspacing="4" class="auto-style1">
                     <tr>
-                        <td class="auto-style2" rowspan="5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            <asp:Image ID="Image1" runat="server" Height="236px" ImageUrl='<%# Eval("MaV") %>' Width="290px" />
+                        <td class="auto-style2" rowspan="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:Image ID="Image1" runat="server" Height="236px" ImageUrl='<%# Eval("Anh") %>' Width="290px" />
                         </td>
                         <td class="auto-style7">Tên vé:<asp:Label ID="TenVLabel" runat="server" Text='<%# Eval("TenV") %>' />
                         </td>
@@ -63,6 +63,11 @@
                     <tr>
                         <td class="auto-style8">Giá vé:
                             <asp:Label ID="GiaVLabel" runat="server" Text='<%# Eval("GiaV") %>' />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="auto-style8">
+                            <asp:Button ID="btnDatVeMayBay" runat="server"  Text="Mua Vé" OnClick="btnDatVeMayBay_Click1" PostBackUrl="~/FEATURE/DatVeMayBay.aspx" />
                         </td>
                     </tr>
                 </table>
