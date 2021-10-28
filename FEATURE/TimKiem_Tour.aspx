@@ -26,10 +26,11 @@
     <form id="form1" runat="server" method="post" action="DatTour.aspx">
     <h1 style="text-align:center">Tìm kiếm Tour đi <asp:Label ID="lblNameOfTour" runat="server" Text=""></asp:Label></h1>
     <h2 style="text-align:center">Tìm thấy <asp:Label ID="lblResult" runat="server" Text=""></asp:Label> kết quả</h2>
-        
-    <asp:DataList ID="dlTour" runat="server" DataKeyField="MaT" Align="Center">
+    
+    <div align="center">
+    <asp:DataList ID="dlTour" runat="server" DataKeyField="MaT" >
         <ItemTemplate>
-            <table align="center" class="auto-style1 data_view">
+            <table  class="auto-style1 data_view">
             <tr>
                 <td rowspan="8" class="auto-style2">
                     <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("Anh") %>' Width="300px"/>
@@ -62,7 +63,7 @@
         </table>
         </ItemTemplate>
     </asp:DataList>
-
+    </div>
     <h3 style="text-align:center"><a href="Tour.aspx">Quay lại giao diện tìm kiếm tour</a></h3>
        
     </form>

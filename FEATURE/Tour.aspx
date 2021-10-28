@@ -39,7 +39,8 @@
             <span class="sr-only">Next</span>
         </a>
         </div>
-        <table  class="table-responsive-lg" align="center" style="font-size:23px;color:white;width:600px;height:200px">
+        <div align="center">
+        <table  class="table-light" style="font-size:23px;color:white;width:600px;height:200px;">
             <tr>
                 <th colspan="3" style="background-color:lightgray;">Tìm tour giá rẻ</th>
             </tr>
@@ -61,6 +62,7 @@
                 <td><span><asp:Button ID="btnFind" runat="server" Text="Tìm kiếm" BackColor="LightBlue" ForeColor="White" Width="200px" OnClick="btnFind_Click"/></span></td>
             </tr>
             </table>
+            </div>
     </form>
 </asp:Content>
 
