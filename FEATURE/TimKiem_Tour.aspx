@@ -8,10 +8,16 @@
             font-size:23px;
         }
         .auto-style2 {
-            width: 300px;
+            width: 400px;
         }
         .table-data {
             width:50%;
+        }
+        .btn-order{
+            float:right;
+            background-color:lightblue;
+            text-align:center;
+            font-size:23px;
         }
     </style>
 </asp:Content>
@@ -26,7 +32,7 @@
             <table align="center" class="auto-style1 data_view">
             <tr>
                 <td rowspan="8" class="auto-style2">
-                    <asp:Image ID="Image1" runat="server" />
+                    <asp:Image ID="Image1" runat="server" ImageUrl='<%# Eval("Anh") %>' Width="300px"/>
                 </td>
                 <td class="table-data">Tên tour :<asp:Label ID="TenTLabel" runat="server" Text='<%# Eval("TenT") %>' /></td>
             </tr>
@@ -50,7 +56,7 @@
             </tr>
             <tr>
                 <td>
-                    <asp:Button ID="btnOrder" runat="server" Text="Đặt ngay" OnClick="btnOrder_Click1"/>
+                    <asp:Button ID="btnOrder" runat="server" Text="Đặt ngay" OnClick="btnOrder_Click1" CssClass="btn-order"/>
                 </td>
             </tr>
         </table>
